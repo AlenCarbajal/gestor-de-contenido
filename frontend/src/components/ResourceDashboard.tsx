@@ -1,6 +1,7 @@
 import {ResourceTable} from './ResourceTable';
-import React, {useState, useEffect} from 'react';
+import { useState } from 'react';
 import axios from 'axios';
+import ResourceGrid from './ResourceGrid';
 
 function ResourceDashboard(){
     const [resources, setResources] = useState<string[]>([]);
@@ -15,7 +16,6 @@ function ResourceDashboard(){
             }
             setResources(res.data);
             setLoading(false);
-            logger.info(res.data)
         } catch(err: any){
             setError(err.message);
             setLoading(false);
@@ -29,7 +29,7 @@ function ResourceDashboard(){
             {
                 loading ? (<h1>Loading...</h1>):
                 error? (<h1>Error:{error}</h1>):
-                (<ResourceTable resources={resources}/>)
+                (<ResourceGrid resources={resources}/>)
             }
         </div>
     );

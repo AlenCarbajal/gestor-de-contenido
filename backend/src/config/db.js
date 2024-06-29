@@ -3,7 +3,7 @@ const config = require('config');
 
 const logger = require('../utils/logger');
 
-const MONGO_URI = config.get('database').uri;
+const MONGO_URI = config.get('database.uri');
 
 const connectDB = async () => {
   try {
