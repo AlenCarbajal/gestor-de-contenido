@@ -1,0 +1,12 @@
+{
+    "server": {
+        "port": 5000
+    },
+    "database": {
+        "uri": "mongodb://localhost:27017/test-gestor-contenido"
+    },
+    "logging": {
+        "level": "info",
+        "directory": "./logs"
+    }
+}

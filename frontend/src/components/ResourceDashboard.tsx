@@ -15,7 +15,7 @@ function ResourceDashboard(){
             }
             setResources(res.data);
             setLoading(false);
-            console.log(res.data)
+            logger.info(res.data)
         } catch(err: any){
             setError(err.message);
             setLoading(false);
