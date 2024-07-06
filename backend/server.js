@@ -10,6 +10,8 @@ const connectDB = require('./src/config/db');
 const logger = require('./src/utils/logger');
 
 const PORT = process.env.PORT || config.get('server').port;
+const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID;
+const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 
 connectDB();
 

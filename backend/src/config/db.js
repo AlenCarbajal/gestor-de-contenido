@@ -2,7 +2,10 @@ const mongoose = require('mongoose');
 
 const logger = require('../utils/logger');
 
-const MONGO_URI = process.env.MONGO_URI;
+DB_USERNAME = process.env.DB_USERNAME;
+DB_PASSWORD = process.env.DB_PASSWORD;
+
+const MONGO_URI = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@gestordecontenidotest.elpvefr.mongodb.net/?retryWrites=true&w=majority&appName=GestorDeContenidoTest;`
 
 const connectDB = async () => {
   try {
