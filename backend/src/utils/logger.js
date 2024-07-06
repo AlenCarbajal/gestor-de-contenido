@@ -3,7 +3,7 @@ const { combine, timestamp, printf, colorize } = format;
 
 const config = require('config');
 
-const level = config.get('logging.level');
+const level = config.get('logging.level') || 'info';
 
 const logFormat = printf(({ level, message, timestamp }) => {
     return `${timestamp} ${level}: ${message}`;
